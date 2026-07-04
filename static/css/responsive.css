@@ -1,0 +1,204 @@
+
+@media (max-width: 992px) {
+
+    .hero{
+        padding:60px 20px;
+        text-align:center;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .card img{
+        height:220px;
+    }
+
+    .product-price{
+        font-size:26px;
+    }
+
+    .navbar-nav{
+        margin-top:15px;
+    }
+
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+
+    h1{
+        font-size:30px;
+    }
+
+    h2{
+        font-size:24px;
+    }
+
+    h3{
+        font-size:20px;
+    }
+
+    .hero{
+        padding:40px 15px;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .card img{
+        height:180px;
+    }
+
+    .table{
+        font-size:14px;
+    }
+
+    .table img{
+        width:50px;
+        height:50px;
+    }
+
+    .product-price{
+        font-size:22px;
+    }
+
+    .btn{
+        width:100%;
+        margin-bottom:10px;
+    }
+
+    .checkout-box{
+        padding:20px;
+    }
+
+    footer{
+        text-align:center;
+    }
+
+}
+
+/* Mobile Phones */
+@media (max-width: 576px) {
+
+    body{
+        font-size:14px;
+    }
+
+    .container,
+    .container-fluid{
+        padding-left:15px;
+        padding-right:15px;
+    }
+
+    .navbar-brand{
+        font-size:20px;
+    }
+
+    .hero h1{
+        font-size:26px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .card{
+        margin-bottom:20px;
+    }
+
+    .card img{
+        height:170px;
+    }
+
+    .card-title{
+        font-size:18px;
+    }
+
+    .price{
+        font-size:20px;
+    }
+
+    .product-price{
+        font-size:20px;
+    }
+
+    .table{
+        font-size:13px;
+    }
+
+    .table th,
+    .table td{
+        padding:8px;
+    }
+
+    .product-thumb{
+        width:50px;
+        height:50px;
+    }
+
+    .dashboard-card{
+        margin-bottom:20px;
+    }
+
+    .dashboard-card h2{
+        font-size:24px;
+    }
+
+    .form-control,
+    .form-select{
+        font-size:14px;
+    }
+
+    .btn{
+        font-size:14px;
+    }
+
+    .badge{
+        font-size:11px;
+    }
+
+    .auth-card{
+        margin:10px;
+    }
+
+}
+
+/* Very Small Devices */
+@media (max-width: 400px) {
+
+    .hero{
+        padding:30px 10px;
+    }
+
+    .hero h1{
+        font-size:22px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .navbar-brand{
+        font-size:18px;
+    }
+
+    .card img{
+        height:150px;
+    }
+
+    .table{
+        font-size:12px;
+    }
+
+    .btn{
+        padding:8px 12px;
+    }
+
+}
+

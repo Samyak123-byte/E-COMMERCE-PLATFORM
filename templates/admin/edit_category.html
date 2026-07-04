@@ -1,0 +1,79 @@
+```html
+{% extends "admin/layout.html" %}
+
+{% block title %}
+Edit Category
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-lg-6">
+
+            <div class="card shadow">
+
+                <div class="card-header bg-warning">
+
+                    <h3>Edit Category</h3>
+
+                </div>
+
+                <div class="card-body">
+
+                    <form method="POST"
+                          action="{{ url_for('edit_category', category_id=category.id) }}">
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+
+                                Category Name
+
+                            </label>
+
+                            <input
+                                type="text"
+                                name="name"
+                                class="form-control"
+                                value="{{ category.name }}"
+                                required>
+
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+
+                            <a
+                                href="{{ url_for('categories') }}"
+                                class="btn btn-secondary">
+
+                                Back
+
+                            </a>
+
+                            <button
+                                type="submit"
+                                class="btn btn-warning">
+
+                                Update Category
+
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
+```

@@ -1,0 +1,312 @@
+```html
+{% extends "base.html" %}
+
+{% block title %}
+Checkout
+{% endblock %}
+
+{% block content %}
+
+<div class="container my-5">
+
+    <div class="row">
+
+        <!-- Billing Details -->
+        <div class="col-lg-7">
+
+            <div class="card shadow">
+
+                <div class="card-header bg-primary text-white">
+                    <h3>Checkout</h3>
+                </div>
+
+                <div class="card-body">
+
+                    <form method="POST" action="{{ url_for('place_order') }}">
+
+                        <!-- Customer Name -->
+
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+
+                            <input
+                                type="text"
+                                name="name"
+                                class="form-control"
+                                required>
+                        </div>
+
+                        <!-- Email -->
+
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+
+                            <input
+                                type="email"
+                                name="email"
+                                class="form-control"
+                                required>
+                        </div>
+
+                        <!-- Phone -->
+
+                        <div class="mb-3">
+                            <label class="form-label">Phone Number</label>
+
+                            <input
+                                type="text"
+                                name="phone"
+                                class="form-control"
+                                required>
+                        </div>
+
+                        <!-- Address -->
+
+                        <div class="mb-3">
+                            <label class="form-label">Address</label>
+
+                            <textarea
+                                name="address"
+                                rows="3"
+                                class="form-control"
+                                required></textarea>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-6">
+
+                                <div class="mb-3">
+
+                                    <label class="form-label">
+                                        City
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        name="city"
+                                        class="form-control"
+                                        required>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <div class="mb-3">
+
+                                    <label class="form-label">
+                                        State
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        name="state"
+                                        class="form-control"
+                                        required>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-md-6">
+
+                                <div class="mb-3">
+
+                                    <label class="form-label">
+                                        ZIP Code
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        name="zip"
+                                        class="form-control"
+                                        required>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <div class="mb-3">
+
+                                    <label class="form-label">
+                                        Country
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        name="country"
+                                        value="India"
+                                        class="form-control">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Payment -->
+
+                        <h5 class="mt-4">
+                            Payment Method
+                        </h5>
+
+                        <div class="form-check">
+
+                            <input
+                                class="form-check-input"
+                                type="radio"
+                                name="payment"
+                                value="cod"
+                                checked>
+
+                            <label class="form-check-label">
+                                Cash on Delivery
+                            </label>
+
+                        </div>
+
+                        <div class="form-check">
+
+                            <input
+                                class="form-check-input"
+                                type="radio"
+                                name="payment"
+                                value="razorpay">
+
+                            <label class="form-check-label">
+                                Razorpay
+                            </label>
+
+                        </div>
+
+                        <div class="form-check mb-4">
+
+                            <input
+                                class="form-check-input"
+                                type="radio"
+                                name="payment"
+                                value="stripe">
+
+                            <label class="form-check-label">
+                                Stripe
+                            </label>
+
+                        </div>
+
+                        <button
+                            class="btn btn-success btn-lg w-100">
+
+                            Place Order
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Order Summary -->
+
+        <div class="col-lg-5">
+
+            <div class="card shadow">
+
+                <div class="card-header bg-dark text-white">
+
+                    <h4>Order Summary</h4>
+
+                </div>
+
+                <div class="card-body">
+
+                    {% for item in cart_items %}
+
+                    <div class="d-flex justify-content-between mb-3">
+
+                        <div>
+
+                            <strong>
+
+                                {{ item.product.name }}
+
+                            </strong>
+
+                            <br>
+
+                            Qty: {{ item.quantity }}
+
+                        </div>
+
+                        <div>
+
+                            ₹{{ "%.2f"|format(item.product.price * item.quantity) }}
+
+                        </div>
+
+                    </div>
+
+                    <hr>
+
+                    {% endfor %}
+
+                    <div class="d-flex justify-content-between">
+
+                        <strong>Subtotal</strong>
+
+                        <strong>
+
+                            ₹{{ "%.2f"|format(total) }}
+
+                        </strong>
+
+                    </div>
+
+                    <div class="d-flex justify-content-between mt-2">
+
+                        <span>Shipping</span>
+
+                        <span class="text-success">
+
+                            FREE
+
+                        </span>
+
+                    </div>
+
+                    <hr>
+
+                    <div class="d-flex justify-content-between">
+
+                        <h4>Total</h4>
+
+                        <h4 class="text-success">
+
+                            ₹{{ "%.2f"|format(total) }}
+
+                        </h4>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
+```

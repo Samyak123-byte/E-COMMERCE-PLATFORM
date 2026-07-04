@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}Home - FlaskShop{% endblock %}
+
+{% block content %}
+
+<h2 class="mb-4">Featured Products</h2>
+
+{% if products and products|length > 0 %}
+
+<div class="row">
+
+    {% for product in products %}
+
+    <div class="col-md-4 mb-4">
+
+        <div class="card h-100 shadow-sm">
+
+            <!-- PRODUCT IMAGE (FIXED) -->
+            <img
+                src="{{ url_for('static', filename='images/products/' + product.get('image', 'default.png')) }}"
+                class="card-img-top"
+                alt="{{ product.name }}"
+                style="height:220px; object-fit:cover;"
+            >
+
+            <div class="card-body">
+
+                <h5 class="card-title">
+                    {{ product.name }}
+                </h5>
+
+                <p class="card-text">
+                    {{ product.description }}
+                </p>
+
+                <h6 class="text-primary">
+                    ₹{{ product.price }}
+                </h6>
+
+                <a href="{{ url_for('main.product_detail', product_id=product.id) }}"
+                   class="btn btn-sm btn-outline-primary mt-2">
+
+                    View Details
+
+                </a>
+
+                <a href="{{ url_for('main.cart') }}"
+                   class="btn btn-sm btn-success mt-2">
+
+                    Add to Cart
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    {% endfor %}
+
+</div>
+
+{% else %}
+
+<div class="alert alert-warning text-center">
+    No products available.
+</div>
+
+{% endif %}
+
+{% endblock %}

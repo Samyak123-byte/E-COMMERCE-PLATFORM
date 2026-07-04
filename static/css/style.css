@@ -1,0 +1,288 @@
+```css
+/* ===========================
+   Global Styles
+=========================== */
+
+body{
+    background:#f8f9fa;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration:none;
+}
+
+.card{
+    border:none;
+    border-radius:12px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+}
+
+.btn{
+    border-radius:8px;
+}
+
+img{
+    max-width:100%;
+}
+
+/* ===========================
+   Navbar
+=========================== */
+
+.navbar{
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+.navbar-brand{
+    font-weight:bold;
+    font-size:24px;
+}
+
+.nav-link{
+    font-weight:500;
+}
+
+.nav-link:hover{
+    color:#ffc107 !important;
+}
+
+/* ===========================
+   Hero Section
+=========================== */
+
+.hero{
+    background:linear-gradient(135deg,#0d6efd,#6610f2);
+    color:white;
+    padding:80px 20px;
+    border-radius:15px;
+    margin-bottom:40px;
+}
+
+.hero h1{
+    font-size:48px;
+    font-weight:bold;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+/* ===========================
+   Product Cards
+=========================== */
+
+.card img{
+    height:250px;
+    object-fit:cover;
+}
+
+.card-title{
+    font-weight:bold;
+}
+
+.price{
+    color:#198754;
+    font-size:24px;
+    font-weight:bold;
+}
+
+/* ===========================
+   Product Detail
+=========================== */
+
+.product-image{
+    width:100%;
+    border-radius:12px;
+}
+
+.product-price{
+    font-size:30px;
+    color:#198754;
+    font-weight:bold;
+}
+
+/* ===========================
+   Cart
+=========================== */
+
+.table img{
+    width:70px;
+    height:70px;
+    object-fit:cover;
+}
+
+.quantity-input{
+    width:80px;
+}
+
+/* ===========================
+   Checkout
+=========================== */
+
+.checkout-box{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 10px rgba(0,0,0,.1);
+}
+
+/* ===========================
+   Login & Register
+=========================== */
+
+.auth-card{
+    border-radius:15px;
+}
+
+.auth-card .card-header{
+    font-size:24px;
+    font-weight:bold;
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+footer{
+    margin-top:60px;
+    padding:25px;
+    background:#212529;
+    color:white;
+}
+
+footer a{
+    color:white;
+}
+
+/* ===========================
+   Admin Sidebar
+=========================== */
+
+.list-group-item{
+    border:none;
+    border-radius:0;
+}
+
+.list-group-item:hover{
+    background:#0d6efd;
+    color:white;
+}
+
+.list-group-item.active{
+    background:#0d6efd;
+    color:white;
+}
+
+/* ===========================
+   Dashboard Cards
+=========================== */
+
+.dashboard-card{
+    border-radius:15px;
+    color:white;
+}
+
+.dashboard-card h2{
+    font-size:34px;
+    font-weight:bold;
+}
+
+/* ===========================
+   Tables
+=========================== */
+
+.table{
+    background:white;
+}
+
+.table thead{
+    background:#212529;
+    color:white;
+}
+
+.table td,
+.table th{
+    vertical-align:middle;
+}
+
+/* ===========================
+   Product Images
+=========================== */
+
+.product-thumb{
+    width:80px;
+    height:80px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+/* ===========================
+   Badges
+=========================== */
+
+.badge{
+    padding:8px 12px;
+    font-size:13px;
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+.btn-success:hover{
+    transform:scale(1.03);
+}
+
+.btn-primary:hover{
+    transform:scale(1.03);
+}
+
+.btn-warning:hover{
+    transform:scale(1.03);
+}
+
+.btn-danger:hover{
+    transform:scale(1.03);
+}
+
+/* ===========================
+   Forms
+=========================== */
+
+.form-control,
+.form-select{
+    border-radius:8px;
+}
+
+.form-control:focus,
+.form-select:focus{
+    box-shadow:none;
+    border-color:#0d6efd;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:32px;
+}
+
+.card img{
+    height:180px;
+}
+
+.product-price{
+    font-size:24px;
+}
+
+}
+```
